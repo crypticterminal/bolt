@@ -130,11 +130,6 @@ abstract class Base implements ControllerProviderInterface
 
             return;
         }
-
-        list($routeName, $routeParams) = $content->getRouteNameAndParams();
-        if ($routeName) {
-            $request->attributes->add(['_route' => $routeName, '_route_params' => $routeParams]);
-        }
     }
 
     /**
